@@ -1,0 +1,7 @@
+# dsh-workflow-console 注册行（bundle patch）
+# 由 package.json 的 dsh.bundle.patch 指向；`dsh plugin add` 安装时写入 profile。
+# 开发/隔离测试时, name 用绝对文件路径让 Cordis loader 直接 import 插件模块,
+# 无需安装到 profile. 发布后 name 恢复为 "dsh-workflow-console" 包名。
+- insert:
+    - id: workflow-console
+      name: "file:///C:/Users/chen/.dsh/workspace/dsh-workflow-console/lib/index.mjs"
